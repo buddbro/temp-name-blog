@@ -4,7 +4,7 @@ const typography = new Typography({
     baseFontSize: '18px',
     baseLineHeight: 1.666,
     headerFontFamily: [
-        'Roboto',
+        'Roboto', 'Roboto Slab',
     ],
     bodyFontFamily: [
         'Montserrat',
@@ -14,6 +14,7 @@ const typography = new Typography({
             name: 'Roboto',
             styles: [
                 '400',
+                '500',
                 '700'
             ],
         },
@@ -21,6 +22,14 @@ const typography = new Typography({
             name: 'Montserrat',
             styles: [
                 '400',
+                '700'
+            ],
+        },
+        {
+            name: 'Roboto Slab',
+            styles: [
+                '400',
+                '500',
                 '700'
             ],
         },

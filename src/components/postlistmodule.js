@@ -2,15 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby';
 
-const Title = styled.h3`
+const HeaderContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 `
-const StyledDate = styled.div`
+const StyledDate = styled.h4`
     color: #bbb;
-    font-size: 18px;
     margin-left: 0.5rem;
+    font-weight: 500;
 `
 
 const SubContainer = styled.div`
@@ -20,12 +20,9 @@ const SubContainer = styled.div`
     align-items: center;
 `
 
-const TimeToRead = styled.div`
-    background: #f0f0f0;
-    font-size 16px;
+const TimeToRead = styled.h4`
     color: #bbb;
-    border-radius: 3px;
-    padding: 0.1rem;
+    font-weight: 500;
     margin-left: 1rem;
 `
 
@@ -40,13 +37,13 @@ const PostListModule = ({node}) => (
         <Link
             to={node.fields.slug}
             style={{textDecoration: 'none', color: 'inherit'}}>
-            <Title>
-                {node.frontmatter.title}
+            <HeaderContainer>
+                <h3 style={{marginBottom: '0.1rem'}}>{node.frontmatter.title}</h3>
                 <SubContainer>
-                    <StyledDate>- {node.frontmatter.date}</StyledDate>
-                    <TimeToRead>{node.timeToRead}m</TimeToRead>
+                    <StyledDate>{node.frontmatter.date}</StyledDate>
+                    <TimeToRead>{node.timeToRead} min read</TimeToRead>
                 </SubContainer>
-            </Title>
+            </HeaderContainer>
             <p>{node.excerpt}</p>
         </Link>
     </StyledContainer>
