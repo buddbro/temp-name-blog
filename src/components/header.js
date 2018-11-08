@@ -1,4 +1,5 @@
 import React from 'react'
+import MenuItem from './menu-item'
 import { Link } from 'gatsby'
 
 const Header = ({ siteTitle }) => (
@@ -13,9 +14,13 @@ const Header = ({ siteTitle }) => (
         margin: '0 auto',
         maxWidth: 960,
         padding: '1.45rem 1.0875rem',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1>
         <Link
           to="/"
           style={{
@@ -26,6 +31,14 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+        }}>
+        <MenuItem page="/about" title="About"/>
+        <MenuItem page="/contact" title="Contact"/>
+      </div>
     </div>
   </div>
 )
