@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Engelbrektsson Blog',
+        short_name: 'Engelbrektsson',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
@@ -33,7 +33,7 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography.js',
       },
     },
-    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-offline',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
