@@ -9,7 +9,6 @@ class MenuItem extends React.Component {
                 <Link
                     to={this.props.page}
                     style={{
-                        color: 'white',
                         textDecoration: 'none',
                     }}
                 >

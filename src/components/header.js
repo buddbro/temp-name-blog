@@ -1,14 +1,15 @@
 import React from 'react'
 import MenuItem from './menu-item'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
+
+const Container = styled.div`
+  border-bottom: 1px solid #C0E5F0;
+  color: #fff;
+`
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
+  <Container>
     <div
       style={{
         margin: '0 auto',
@@ -24,7 +25,6 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: 'white',
             textDecoration: 'none',
           }}
         >
@@ -40,7 +40,7 @@ const Header = ({ siteTitle }) => (
         <MenuItem page="/contact" title="Contact"/>
       </div>
     </div>
-  </div>
+  </Container>
 )
 
 export default Header
